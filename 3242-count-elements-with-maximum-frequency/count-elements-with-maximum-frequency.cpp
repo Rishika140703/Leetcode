@@ -7,10 +7,7 @@ public:
 
         for(int num : nums){
             mp[num]++;
-        }
-
-        for(auto it : mp){
-            maxfreq = max(maxfreq, it.second);           
+            maxfreq = max(maxfreq, mp[num]);
         }
 
         for(auto it : mp){
@@ -18,7 +15,7 @@ public:
                 ans += it.second;
             } 
         }
-        
+
         return ans;
     }
 };
